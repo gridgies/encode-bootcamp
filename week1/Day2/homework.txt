@@ -1,0 +1,8 @@
+What behaviour / aspects of the system do you want to encourage?
+
+
+What behaviour / aspects of the system do you want to discourage?
+
+
+What means do you have for this incentivisation?
+- economic rewards / penalties in case of malicious behaviour
