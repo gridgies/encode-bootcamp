@@ -1,8 +1,13 @@
 What behaviour / aspects of the system do you want to encourage?
-
+- avoid double spending of a digital token
+- avoid 51% attacks
+- possibility for fast/cheap transactions
 
 What behaviour / aspects of the system do you want to discourage?
+- possibility of double spending
+- malicious behaviour
 
 
 What means do you have for this incentivisation?
 - economic rewards / penalties in case of malicious behaviour
+- make 51% attacks expensive
