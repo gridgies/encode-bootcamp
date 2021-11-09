@@ -6,14 +6,12 @@ contract Score {
     uint score = 5;
     address owner;
 
-    event NewScore(uint _newScore);
-
     constructor() {
         owner = msg.sender;
     }
 
     modifier onlyOwner {
-        if(msg.sender == owner) {
+        if (msg.sender == owner) {
             _;
         }
     }
@@ -22,10 +20,12 @@ contract Score {
         return score;
     }
 
-    function setScore(uint _newScore) public {
-        score = _newScore;
+    event Score_set(uint indexed);
 
-        emit NewScore(score);
+    function setScore(uint _newScore) public onlyOwner {
+        score = _newScore;
+        emit Score_set(_newScore);
     }
+
 
 }
