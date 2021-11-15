@@ -41,4 +41,9 @@ contract VolcanoCoin {
     }
 
     event Amount_transferred(uint, address);
+
+    struct Payment {
+        uint amount;
+        address recipient;
+    }
 }
