@@ -10,6 +10,8 @@ contract VolcanoCoin {
         owner = msg.sender;
     }
 
+    mapping(address => uint) balance;
+
     modifier onlyOwner {
         if (msg.sender == owner) {
             _;
