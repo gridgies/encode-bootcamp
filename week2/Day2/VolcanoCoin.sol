@@ -34,18 +34,24 @@ contract VolcanoCoin {
 
     event Supply_increased(uint);
 
-    function transfer(address recipient, uint amount) public {
-        balance[owner] = balance[owner] - amount;
-        balance[recipient] = balance[recipient] + amount;
-        emit Amount_transferred(amount, recipient);
-    }
-
-    event Amount_transferred(uint, address);
-
     struct Payment {
         uint amount;
         address recipient;
     }
 
+    function transfer(address recipient, uint amount) public {
+        balance[owner] = balance[owner] - amount;
+        balance[recipient] = balance[recipient] + amount;
+
+        Payment memory pay;
+        pay.amount = amount;
+        pay.recipient = recipient;
+        payments[owner].push();
+        emit Amount_transferred(amount, recipient);
+    }
+
+    event Amount_transferred(uint, address);
+
     mapping(address => bytes) payments;
+
 }
