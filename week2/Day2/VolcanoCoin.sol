@@ -46,4 +46,6 @@ contract VolcanoCoin {
         uint amount;
         address recipient;
     }
+
+    mapping(address => bytes) payments;
 }
