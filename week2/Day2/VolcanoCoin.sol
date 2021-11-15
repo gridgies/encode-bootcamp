@@ -8,14 +8,19 @@ contract VolcanoCoin {
 
     constructor() {
         owner = msg.sender;
+        balance[owner] = supply;
     }
-
-    mapping(address => uint) balance;
 
     modifier onlyOwner {
         if (msg.sender == owner) {
             _;
         }
+    }
+
+    mapping(address => uint) balance;
+
+    function getBalance() public view returns (uint) {
+        return balance[owner];
     }
 
     function getSupply() public view returns (uint) {
@@ -28,4 +33,12 @@ contract VolcanoCoin {
     }
 
     event Supply_increased(uint);
+
+    function transfer(address recipient, uint amount) public {
+        balance[owner] = balance[owner] - amount;
+        balance[recipient] = balance[recipient] + amount;
+        emit Amount_transferred(amount, recipient);
+    }
+
+    event Amount_transferred(uint, address);
 }
