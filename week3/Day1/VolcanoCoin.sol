@@ -1,8 +1,9 @@
 //SPDX-License-Identifier: UNLICENSED
+import "@openzeppelin/contracts@4.2.0/token/ERC20/ERC20.sol";
 
 pragma solidity ^0.8.0;
 
-contract VolcanoCoin {
+contract VolcanoCoin is ERC20 {
     uint supply = 10000;
     address owner;
 
