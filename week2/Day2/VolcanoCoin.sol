@@ -40,7 +40,7 @@ contract VolcanoCoin {
     }
 
     function transfer(address recipient, uint amount) public {
-        balance[owner] = balance[owner] - amount;
+        balance[msg.sender] = balance[owner] - amount;
         balance[recipient] = balance[recipient] + amount;
 
         Payment memory pay;
