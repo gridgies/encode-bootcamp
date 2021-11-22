@@ -15,3 +15,4 @@ const IPFS = require('ipfs');
   // Log CID to console
   console.log(cid.path);
 })();
+
