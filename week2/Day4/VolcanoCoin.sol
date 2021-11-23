@@ -1,15 +1,18 @@
 //SPDX-License-Identifier: UNLICENSED
-import "@openzeppelin/contracts@4.2.0/token/ERC20/ERC20.sol";
 
 pragma solidity ^0.8.0;
 
-contract VolcanoCoin is ERC20 {
-    uint supply = 10000;
+contract VolcanoCoin {
+    uint public supply;
     address owner;
+    
+    mapping(address => uint) public balance;
+    mapping(address => Payment[]) payments;
 
     constructor() {
+        supply = 10000;
         owner = msg.sender;
-        balance[owner] = supply;
+        balance[msg.sender] = supply;
     }
 
     modifier onlyOwner {
@@ -17,8 +20,6 @@ contract VolcanoCoin is ERC20 {
             _;
         }
     }
-
-    mapping(address => uint) balance;
 
     function getBalance() public view returns (uint) {
         return balance[owner];
@@ -53,6 +54,6 @@ contract VolcanoCoin is ERC20 {
 
     event Amount_transferred(uint, address);
 
-    mapping(address => bytes) payments;
+
 
 }
