@@ -4,13 +4,15 @@ import "@openzeppelin/contracts@4.2.0/token/ERC20/ERC20.sol";
 pragma solidity ^0.8.0;
 
 contract VolcanoCoin is ERC20 {
-    uint supply = 10000;
-    address owner;
-
-    constructor() {
+    constructor(string memory _tokenName, string memory _symbol) ERC20("VolcanoCoin", "VOL") public {
         owner = msg.sender;
         balance[owner] = supply;
     }
+    
+    uint supply = 10000;
+    address owner;
+
+    
 
     modifier onlyOwner {
         if (msg.sender == owner) {
@@ -40,7 +42,7 @@ contract VolcanoCoin is ERC20 {
         address recipient;
     }
 
-    function transfer(address recipient, uint amount) public {
+    function transferCoins(address recipient, uint amount) public {
         balance[owner] = balance[owner] - amount;
         balance[recipient] = balance[recipient] + amount;
 
