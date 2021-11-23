@@ -6,18 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_tokenName",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "_symbol",
-						"type": "string"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -469,11 +458,11 @@
 			]
 		},
 		"week3/Day1/HW5 VolcanoCoin.sol": {
-			"keccak256": "0x7c7605b0b7e437dfd2df3e87d648505ff77720f2d7d151e75cd7f5c18ac12e2f",
+			"keccak256": "0xb4503c9b3cc2d92e1c4721da591c2e13bcd5ec895f21f150cda9b71f5de0f265",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://18176397eb9782e6b2ce80f9f57da66293f15172df0c6ad3a6dc0472e60c4b85",
-				"dweb:/ipfs/QmaZ3KnDWMrfua61LusQNDakKPDvsUTZsDhi94yoAh7KEX"
+				"bzz-raw://945260e20068d4573d8ddc940781fb5e681b73bd8b0c0f05ba68c0f7a7d37004",
+				"dweb:/ipfs/QmcS8RPQJe8jDqJ8ryTpm642d27FH6koynjKN8sYwzMR7G"
 			]
 		}
 	},

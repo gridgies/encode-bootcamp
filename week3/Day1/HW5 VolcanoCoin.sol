@@ -4,7 +4,7 @@ import "@openzeppelin/contracts@4.2.0/token/ERC20/ERC20.sol";
 pragma solidity ^0.8.0;
 
 contract VolcanoCoin is ERC20 {
-    constructor(string memory _tokenName, string memory _symbol) ERC20("VolcanoCoin", "VOL") public {
+    constructor() ERC20("VolcanoCoin", "VOL") {
         owner = msg.sender;
         balance[owner] = supply;
     }
