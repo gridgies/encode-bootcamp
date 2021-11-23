@@ -16,9 +16,8 @@ contract VolcanoCoin {
     }
 
     modifier onlyOwner {
-        if (msg.sender == owner) {
-            _;
-        }
+        require(msg.sender == owner, "You must be the owner");
+        _;
     }
 
     function getBalance() public view returns (uint) {
@@ -53,7 +52,10 @@ contract VolcanoCoin {
     }
 
     event Amount_transferred(uint, address);
-
+    
+    function getPayments(address _user) public view returns (Payment[] memory) {
+        return payments[_user];
+    }
 
 
 }

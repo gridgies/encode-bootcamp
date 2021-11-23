@@ -75,6 +75,37 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "getPayments",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "recipient",
+								"type": "address"
+							}
+						],
+						"internalType": "struct VolcanoCoin.Payment[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getSupply",
 				"outputs": [
@@ -154,11 +185,11 @@
 	},
 	"sources": {
 		"week2/Day4/VolcanoCoin.sol": {
-			"keccak256": "0x9180c6b2f0eed1a4e387fad4ca041524822aea294e16fe039054170c7b25a643",
+			"keccak256": "0x5eba96af5bdf6adaf208d82e8f50a3d163b72113ede51bac72880db5a29ba211",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://9e1be815c1253de91b08c00e397f7602f6d76613a54d5e783a24f9e0a2b25535",
-				"dweb:/ipfs/QmZbygyScLm1m2Wp9ukT9tM8vPAXTLivA6ydermmqtQ6aS"
+				"bzz-raw://7d9b7ab818b9ac304f127c75014f24ac758b46c5bf62b1cd51b7a79009a542a6",
+				"dweb:/ipfs/Qma5DGZDxqJcm6NnLWFps5eucD7wXZs49Ec35396VXfEFN"
 			]
 		}
 	},
