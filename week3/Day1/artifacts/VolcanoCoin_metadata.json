@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.7+commit.e28d00a7"
+		"version": "0.8.10+commit.fc410830"
 	},
 	"language": "Solidity",
 	"output": {
@@ -58,19 +58,6 @@
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "Supply_increased",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
 						"indexed": true,
 						"internalType": "address",
 						"name": "from",
@@ -90,6 +77,19 @@
 					}
 				],
 				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "supplyIncreased",
 				"type": "event"
 			},
 			{
@@ -228,19 +228,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getSupply",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -265,7 +252,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_quantity",
+						"type": "uint256"
+					}
+				],
 				"name": "increaseSupply",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -547,11 +540,11 @@
 			]
 		},
 		"week3/Day1/HW5 VolcanoCoin.sol": {
-			"keccak256": "0xa9c648f4b217c30b218f2fc90420dbd116f52910fcd84a02c999e53da67584a4",
+			"keccak256": "0xebfe72cf78d0580cabc39e96a3d7d7d32434ad3271b7058e53420743ca4cae73",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://7e40cf5c11c2721599e04847c4d904cd5fc7b932be71ec1ba40e737eda78680d",
-				"dweb:/ipfs/Qmev8YPq8iyrkqGqcqtNgwKCVjYDzuiuPXPhNYSARQZh2N"
+				"bzz-raw://e2d68a440a57f13ffecbf21f2a6ad7b34c569fe496263765b9646c8543d4e33f",
+				"dweb:/ipfs/QmUeByvW59EffUtLvwfUsUDJoo2ihsZQnRnJfvob35yG1G"
 			]
 		}
 	},
