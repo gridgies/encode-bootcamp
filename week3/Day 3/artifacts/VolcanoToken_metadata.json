@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.10+commit.fc410830"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
@@ -550,11 +550,11 @@
 			]
 		},
 		"week3/Day 3/VolcanoToken.sol": {
-			"keccak256": "0x28af2541c0233e2f32f9bd52ad9288d77efdbda28ac4567e4f51f51b638eddf5",
+			"keccak256": "0xf8df833267fafc47d096ab6ba2ab642077975754f18be79a7ed93eebb32cc313",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://16dfde30c05324731004e1176a64f42f0a818e2218e7912b552b5615e1bf2157",
-				"dweb:/ipfs/Qmb1PsLLe5CHdj3mtHvkuZY1AP2WwijMgvLVy1cUXKemwa"
+				"bzz-raw://169329270e0fb68727348f4e36b821b385743cbc19c861c0dea6cb794d787da3",
+				"dweb:/ipfs/QmWUG15oH3mGGVPFQoK2CMhvVfU5ctkceYk4CUjDpVuPbC"
 			]
 		}
 	},
