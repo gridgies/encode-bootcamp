@@ -1,30 +1,23 @@
 //SPDX-License-Identifier: UNLICENSED
-import "@openzeppelin/contracts@4.2.0/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
 pragma solidity ^0.8.0;
 
-contract VolcanoCoin is ERC20 {
-    constructor() ERC20("VolcanoCoin", "VOL") {
-        owner = msg.sender;
-        balance[owner] = supply;
+contract VolcanoCoin is ERC20("VolcanoCoin", "VOL"), Ownable {
+    
+    uint initialSupply = 10000;
+    
+    constructor() {
+        _mint(msg.sender, initialSupply);
     }
     
-    uint supply = 10000;
-    address owner;
-
+    function mintToken(uint _quantity) public onlyOwner {
+        _mint(msg.sender, _quantity);
+        emit Supply_increased(_quantity);
+    }
     
-
-    modifier onlyOwner {
-        if (msg.sender == owner) {
-            _;
-        }
-    }
-
-    mapping(address => uint) balance;
-
-    function getBalance() public view returns (uint) {
-        return balance[owner];
-    }
+    uint supply;
 
     function getSupply() public view returns (uint) {
         return supply;
@@ -42,19 +35,22 @@ contract VolcanoCoin is ERC20 {
         address recipient;
     }
 
-    function transferCoins(address recipient, uint amount) public {
-        balance[owner] = balance[owner] - amount;
-        balance[recipient] = balance[recipient] + amount;
-
-        Payment memory pay;
-        pay.amount = amount;
-        pay.recipient = recipient;
-        payments[owner].push();
-        emit Amount_transferred(amount, recipient);
+    mapping (address => Payment[]) public payments;
+    
+    function transfer(address _recipient, uint _amount) public virtual override returns (bool) {
+        _transfer(msg.sender, _recipient, _amount);
+        addPayment(msg.sender, _recipient, _amount);
+        return true;
     }
 
-    event Amount_transferred(uint, address);
+    
+    function getPayments(address _user) public view returns (Payment[] memory) {
+        return payments[_user];
+    }
+    
+    function addPayment(address _sender, address _recipient, uint _amount) internal {
+        payments[_sender].push(Payment(_amount, _recipient));
+    }
 
-    mapping(address => bytes) payments;
 
 }
