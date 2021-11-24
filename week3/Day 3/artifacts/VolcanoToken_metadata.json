@@ -185,6 +185,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "minting",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "name",
 				"outputs": [
@@ -224,6 +237,40 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerToTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "tokenURI",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -550,11 +597,11 @@
 			]
 		},
 		"week3/Day 3/VolcanoToken.sol": {
-			"keccak256": "0xf8df833267fafc47d096ab6ba2ab642077975754f18be79a7ed93eebb32cc313",
+			"keccak256": "0x89f58d806611cc1709c01f85cdd3eb6857072f41f02ff182da7330720972a5ed",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://169329270e0fb68727348f4e36b821b385743cbc19c861c0dea6cb794d787da3",
-				"dweb:/ipfs/QmWUG15oH3mGGVPFQoK2CMhvVfU5ctkceYk4CUjDpVuPbC"
+				"bzz-raw://3e53cc7f3fdf70c6fb97aba52430a3beafe4bdfa1e005a3b26ca1923cdce6d0a",
+				"dweb:/ipfs/QmSWTZjKBAUPY6mbeKFGY2LT8fLdefFhuy1SxVZ3ALAKaB"
 			]
 		}
 	},
