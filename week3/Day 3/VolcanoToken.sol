@@ -23,7 +23,7 @@ contract VolcanoToken is ERC721, Ownable {
         _tokenId++;
     }
     
-    function burn(uint _tokenId) public {
+    function burn(uint _tokenId) public onlyOwner {
         _burn(_tokenId);
         removeBurnedIds(_tokenId);
     }
