@@ -610,11 +610,11 @@
 			]
 		},
 		"week3/Day 3/VolcanoToken.sol": {
-			"keccak256": "0xb629b6cf12ef7e261b682803ea01464de43c3428f531058c551f820ba7246e8b",
+			"keccak256": "0xf8a72ca44fd5088a5c95eba424246bd6fbbff6484f3f63971ebbdf4d98d754de",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://5c71342ca502a36b7c85cdb264cbd5d49d2601d13d87c6818c80deca5dbbdc2f",
-				"dweb:/ipfs/QmUnNCxNGK2rnPx6jZZ1vXrJGRraJXfXtnAi8Uy51kqNY3"
+				"bzz-raw://f7eaff6c4999b2d1f466c03c4f92f87f632bc2e38e7e25d620eda66bc61dcfb0",
+				"dweb:/ipfs/QmUELigMVJegKCQQSCCPQX5kzr8MLH65x3rG9KP1jAre41"
 			]
 		}
 	},
