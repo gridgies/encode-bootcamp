@@ -17,9 +17,24 @@ contract VolcanoToken is ERC721, Ownable {
     
     mapping(address => Token[]) public ownerToTokens;
     
-    function minting(uint _tokenId) public {
+    function mint(uint _tokenId) public {
         Token memory newToken = Token(block.timestamp, _tokenId, "random");
         ownerToTokens[msg.sender].push(newToken);
         _tokenId++;
+    }
+    
+    function burn(uint _tokenId) public {
+        _burn(_tokenId);
+    }
+    
+    
+    
+    function removeBurnedIds(uint _burntId) internal view {
+        uint arrayLength = ownerToTokens[msg.sender].length;
+        for(uint i = 0; i < arrayLength; i++) {
+            if (ownerToTokens[msg.sender][0] == _burntId) {
+                delete ownerToTokens[msg.sender][0];
+            }
+        }
     }
 }

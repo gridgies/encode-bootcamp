@@ -145,6 +145,19 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "tokenId",
 						"type": "uint256"
 					}
@@ -192,7 +205,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "minting",
+				"name": "mint",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -597,11 +610,11 @@
 			]
 		},
 		"week3/Day 3/VolcanoToken.sol": {
-			"keccak256": "0x89f58d806611cc1709c01f85cdd3eb6857072f41f02ff182da7330720972a5ed",
+			"keccak256": "0xb629b6cf12ef7e261b682803ea01464de43c3428f531058c551f820ba7246e8b",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://3e53cc7f3fdf70c6fb97aba52430a3beafe4bdfa1e005a3b26ca1923cdce6d0a",
-				"dweb:/ipfs/QmSWTZjKBAUPY6mbeKFGY2LT8fLdefFhuy1SxVZ3ALAKaB"
+				"bzz-raw://5c71342ca502a36b7c85cdb264cbd5d49d2601d13d87c6818c80deca5dbbdc2f",
+				"dweb:/ipfs/QmUnNCxNGK2rnPx6jZZ1vXrJGRraJXfXtnAi8Uy51kqNY3"
 			]
 		}
 	},
