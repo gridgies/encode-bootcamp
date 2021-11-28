@@ -24,6 +24,7 @@ contract VolcanoToken is ERC721, Ownable {
     }
     
     function burn(uint _tokenId) public onlyOwner {
+        require(msg.sender == ownerOf(_tokenId), "Only owner of token can burn token");
         _burn(_tokenId);
         removeBurnedIds(_tokenId);
     }
