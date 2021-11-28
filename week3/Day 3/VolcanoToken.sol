@@ -38,4 +38,8 @@ contract VolcanoToken is ERC721, Ownable {
             }
         }
     }
+
+    function deleteFromMapping() internal {
+        
+    }
 }
